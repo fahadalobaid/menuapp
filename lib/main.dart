@@ -1,7 +1,6 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:menu_app/models/food.dart';
+import 'package:menu_app/pages/menu_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +9,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold());
+    return MaterialApp(
+      title: 'Menu App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MenuPage(),
+    );
   }
 }
